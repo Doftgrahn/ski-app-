@@ -1,0 +1,18 @@
+<header>
+  <h1> {{title | uppercase}} </h1>
+  <div class="hamburger" (click)="hamburger()" [ngClass]="{ 'active': toggle }">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<app-ski></app-ski>
+
+<div class="hamburger-meny" [ngClass]="{'hamburger_fade ': toggle}">
+  <ul>
+    <li>Home</li>
+    <li>Ski</li>
+    <li>Map</li>
+  </ul>
+</div>

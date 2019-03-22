@@ -1,0 +1,75 @@
+<section>
+  <!-- <header>
+    <h1> {{title | uppercase}} </h1>
+    <div class="hamburger" (click)="hamburger()" [ngClass]="{ 'active': toggle }">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header> -->
+
+  <div class="pic__container">
+    <img [src]="picture" alt="picture" />
+
+  </div>
+
+
+
+
+  <div class="container__all">
+
+    <span>Put in your age, height and the way you like to skii!</span>
+
+    <div class="input_wrapper">
+      <div class="input_container">
+        <label for="age">AGE:</label>
+        <input type="number" name="age" placeholder="age" [(ngModel)]="age" />
+      </div>
+
+      <div class="input_container">
+        <label for="height">HEIGHT:</label>
+        <input type="number" name="height" placeholder="height" [(ngModel)]="height" />
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <h3>Choose your way of skiing!</h3>
+      <div *ngFor="let option of options; let i=index">
+        <input type="radio" id="{{option.id}}" name="radio" [(ngModel)]="toggleSki" [value]="option.id" />
+        <label for="{{option.id}}">{{option.id}}</label>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button (click)="checkResult(age, height,toggleSki)">Check out result</button>
+    </div>
+    <div class="resultWrapper">
+      <p *ngIf="!sum"> You have not chosen yet!</p>
+
+      <p *ngIf="sum"> You should be using skies with a size of {{sum}} cm. </p>
+    </div>
+  </div>
+
+  <footer>
+    <div>
+      <span>@DoftGrahn 2019</span>
+    </div>
+    <div class="social-media">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+    <div>
+      <span>Phone: +3401233439</span><br />
+      <span>Email: Simon.grahn@gmail.com</span>
+    </div>
+
+
+
+
+
+
+
+
+  </footer>
+
+</section>

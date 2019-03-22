@@ -1,0 +1,129 @@
+@import '../shared/variables';
+
+section {
+  .pic__container {
+    display: flex;
+
+    img {
+      flex: 1;
+      height: 200px;
+      object-fit: fill;
+      @media screen and (min-width: 800px) {
+        object-fit: fill;
+        height: 800px;
+      }
+    }
+  }
+
+  .container__all {
+    border-top: 20px solid $color-button;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 20px;
+    background-color: $color-lighblue;
+    @media screen and (min-width: 800px) {
+      align-items: center;
+      padding: 20px;
+    }
+
+    span {
+      margin-top: 20px;
+      padding: 10px;
+    }
+  }
+
+  .input_wrapper {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+
+    .input_container {
+      margin-top: 20px;
+
+      input {
+        outline: none;
+        border: 1px solid black;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: white;
+
+        &::placeholder {
+          color: black;
+          font-size: 12px;
+        }
+      }
+
+      label {
+        margin-top: 5px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .wrapper {
+    margin: 20px;
+
+    input {
+      margin: 10px;
+
+      &[type=radio] {
+        background-color: $color-mellowblue;
+      }
+    }
+  }
+
+  .button-container {
+    border-top: 20px solid $color-button;
+    // background-color:$color-mellowblue;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      border: none;
+      color: white;
+      // width: 50%;
+      padding: 10px;
+      background-color: $color-text;
+      border-radius: 5px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  .resultWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $color-mellowblue;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+
+  footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    // background-color: $color-mellowblue;
+    background-color: $color-button;
+    height: 160px;
+    width: 100%;
+
+    span {
+      color: #e4dedc;
+    }
+
+    .social-media {
+      i {
+        margin: 5px;
+      }
+    }
+  }
+}
+/* Credit to Brian Edward Miller  for pics
+https://dribbble.com/bemocs
+*/
