@@ -5,15 +5,20 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SkiComponent } from './ski/ski.component';
 import { FormService } from './shared/form.service';
+import { InfoComponent } from './info/info.component';
+
+import { AppRoutingModule } from './shared/app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SkiComponent
+    SkiComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
   ],
   providers: [FormService],
   bootstrap: [AppComponent]

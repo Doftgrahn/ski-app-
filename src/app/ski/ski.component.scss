@@ -31,6 +31,7 @@ section {
       font-weight: 600;
       margin-top: 20px;
       padding: 10px;
+      color:$color-purple;
     }
   }
 
@@ -40,7 +41,7 @@ section {
     flex-direction: column;
 
     .input_container {
-      margin-top: 30px;
+      margin-top: 10px;
 
       input {
         border: none;
@@ -50,23 +51,25 @@ section {
         padding: 10px;
         margin-top: 10px;
         transform: translate3d(1em);
-        border-bottom: 4px solid transparant $color-purple;
+        border-bottom: 4px solid $color-background;
+        transition: border .4s ease;
 
         &:focus {
-          color: white;
+          color: $color-purple;
           outline: none;
           border-bottom: 4px solid $color-purple;
-          transform: scale(1.001);
+          //transform: scale(1.001);
         }
 
         &::placeholder {
-          color: black;
+          color: $color-purple;
           font-size: 12px;
           font-weight: 800;
         }
       }
 
       label {
+        color:$color-purple;
         font-weight: 800;
         margin-top: 5px;
         font-size: 16px;
@@ -76,12 +79,24 @@ section {
 
   .wrapper {
     margin: 20px;
+    h3 {
+      color:$color-purple
+    }
 
     input {
       margin: 10px;
       position: absolute;
       opacity: 0;
-
+      // border:4px transprent;
+      // border-bottom: 4px solid $color-background;
+      &:active,
+      &:focus {
+        & + label {
+          &:before {
+            // border: 4px solid $color-purple;
+          }
+        }
+      }
       &:checked + label {
         &:after {
           content: '';
@@ -94,6 +109,7 @@ section {
 
     label {
       position: relative;
+      color:$color-purple;
 
       &:before {
         border-radius: 20px;
@@ -107,6 +123,7 @@ section {
       }
 
       &:after {
+
         border-radius: 20px;
         transition: 0.5s;
         border-radius: 20px;
@@ -130,9 +147,11 @@ section {
     align-items: center;
 
     button {
+      position: relative;
       transition: 0.2s;
       border: none;
       color: white;
+      margin: 10px;
       // width: 50%;
       padding: 20px;
       background-color: $color-purple;
@@ -142,7 +161,7 @@ section {
       cursor: pointer;
 
       &:hover {
-        background-color:$color-border;
+        background-color: $color-border;
       }
     }
   }
@@ -159,28 +178,6 @@ section {
     color: white;
   }
 
-  footer {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: $color-purple;
-    height: 160px;
-    width: 100%;
-    text-align: center;
-
-    span {
-      color: #e4dedc;
-    }
-
-    .social-media {
-      i {
-        font-size: 25px;
-        color: white;
-        margin: 5px;
-      }
-    }
-  }
 }
 /* Credit to Brian Edward Miller  for pics
 https://dribbble.com/bemocs

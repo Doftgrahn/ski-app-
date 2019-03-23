@@ -1,7 +1,7 @@
 @import './shared/variables';
 
 header {
-  overflow-x: hidden;
+  // overflow-y: hidden;
   background-color: $color-purple;
   display: flex;
   justify-content: space-between;
@@ -15,7 +15,7 @@ header {
   }
 
   h1 {
-    color:white;
+    color: white;
     margin-left: 28px;
     letter-spacing: 2px;
     font-weight: 800;
@@ -97,6 +97,12 @@ header {
     li {
       color: white;
       margin-top: 20px;
+
+      a {
+        color: white;
+        outline: none;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -104,4 +110,38 @@ header {
 .hamburger_fade {
   right: 0;
   display: block;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom0: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: $color-purple;
+  height: 160px;
+  width: 100%;
+  text-align: center;
+
+  span {
+    color: #e4dedc;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .social-media {
+    i {
+      cursor: pointer;
+      transition: 0.2s;
+      font-size: 25px;
+      color: white;
+      margin: 5px;
+
+      &:hover {
+        color: $color-background;
+      }
+    }
+  }
 }

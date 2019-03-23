@@ -6,11 +6,32 @@
     <span></span>
   </div>
 </header>
-<app-ski></app-ski>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <div>
+    <span>@DoftGrahn 2019</span>
+  </div>
+  <div class="social-media">
+    <a href="https://github.com/Doftgrahn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/in/simon-grahn-06994797" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+    <a href="https://dribbble.com/doftgrahn" target="_blank" rel="noopener noreferrer"><i class="fab fa-dribbble"></i></a>
+
+  </div>
+  <div>
+    <span>Phone: +3401233439</span><br />
+    <span>Email: Simon.grahn@gmail.com</span>
+  </div>
+</footer>
+
+
+
+
 <div class="hamburger-meny" [ngClass]="{'hamburger_fade ': toggle}">
   <ul>
-    <li>Home</li>
-    <li>Ski</li>
-    <li>Map</li>
+    <li> <a routerLink="/SkiCalculator" (click)="toggleOff()">Ski</a>
+    </li>
+    <li><a routerLink="/Info" (click)="toggleOff()">About me</a></li>
   </ul>
 </div>

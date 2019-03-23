@@ -16,14 +16,14 @@
 
       <div class="input_container">
         <label for="height">HEIGHT</label>
-        <input type="number" name="height" placeholder="Your height, e.g. 143" [(ngModel)]="height" required/>
+        <input type="number" name="height" placeholder="Your height, e.g. 143" [(ngModel)]="height" required />
       </div>
     </div>
 
     <div class="wrapper">
       <h3>Choose your way of skiing!</h3>
       <div *ngFor="let option of options; let i  = index;">
-        <input type="radio" id="{{option.id}}" name="radio" [(ngModel)]="toggleSki" [value]="option.id" [attr.checked]="i == 0 ? '': null"  />
+        <input type="radio" id="{{option.id}}" name="radio" [(ngModel)]="toggleSki" [value]="option.id" [attr.checked]="i == 0 ? '': null" />
         <label for="{{option.id}}">{{option.id}}</label>
       </div>
     </div>
@@ -37,19 +37,5 @@
       <p *ngIf="sum"> You should be using skies with a size of {{sum}} cm. </p>
     </div>
   </div>
-
-  <footer>
-    <div>
-      <span>@DoftGrahn 2019</span>
-    </div>
-    <div class="social-media">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-instagram"></i>
-    </div>
-    <div>
-      <span>Phone: +3401233439</span><br />
-      <span>Email: Simon.grahn@gmail.com</span>
-    </div>
-</footer>
-
+  
 </section>

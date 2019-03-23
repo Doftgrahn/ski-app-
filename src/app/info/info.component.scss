@@ -1,0 +1,64 @@
+@import '../shared/variables';
+
+section {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    padding: 20px;
+    margin: 20px;
+    width: 80%;
+    background-color: $color-border;
+
+    h3 {
+      text-align: center;
+      color: white;
+    }
+
+    span {
+      display: block;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .info__wrapper {
+    text-align: center;
+    background-color: $color-border;
+    width: 80%;
+    padding: 20px;
+    margin: 20px;
+
+    p {
+      color: white;
+    }
+
+    span {
+      color: white;
+    }
+  }
+
+  .link__container {
+    text-align: left;
+    padding: 20px;
+    width: 80%;
+    background-color: $color-border;
+
+    span {
+      color: white;
+    }
+
+    li {
+      margin-top: 10px;
+      list-style-type: none;
+
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+}
