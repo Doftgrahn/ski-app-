@@ -1,7 +1,7 @@
 @import './shared/variables';
 
 header {
-  // overflow-y: hidden;
+  overflow: hidden;
   background-color: $color-purple;
   display: flex;
   justify-content: space-between;
@@ -10,7 +10,7 @@ header {
   height: 80px;
   padding: 10px;
   @media screen and (min-width: 800px) {
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -22,8 +22,9 @@ header {
   }
 
   .hamburger {
-    overflow-x: hidden;
-    z-index: 1;
+    overflow: hidden;
+    right: 0;
+    z-index: 4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,6 +33,7 @@ header {
     margin-right: 20px;
 
     span {
+      overflow: hidden;
       position: relative;
       height: 4px;
       width: 34px;
@@ -75,41 +77,70 @@ header {
 }
 
 .hamburger-meny {
-  overflow-y: hidde;
+  z-index: 20;
   position: absolute;
+  overflow: hidden;
   transition: 0.4s;
   font-size: 30px;
   align-items: flex-start;
   width: 100%;
-  min-height: 137.3vh;
+  height: 100vh;
   background-color: $color-border;
   top: 0;
   right: 100%;
   padding: 80px 20px 50px;
   @media screen and (min-width: 800px) {
-    display: inline-flex;
+    background: none;
+    display: flex;
+    align-items: flex-end;
+    display: inline-block;
+    flex-direction: row;
+    position: static;
+    height: 100px;
+    width: 300px;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
   }
 
   ul {
+    z-index: 10;
     list-style-type: none;
     cursor: pointer;
 
     li {
       color: white;
       margin-top: 20px;
+      @media screen and (min-width: 800px) {
+        display: inline-block;
+        margin-left: 20px;
+      }
 
       a {
+        transition: 0.2s;
         color: white;
         outline: none;
         text-decoration: none;
+
+        &:hover {
+          color: $color-background;
+        }
       }
     }
   }
 }
 
 .hamburger_fade {
+  z-index: 1;
+  overflow: hidden;
+  min-height: 200vh;
+  width: 100%;
+  overflow: hidden;
   right: 0;
-  display: block;
+  @media screen and (min-width: 800px) {
+    position: static;
+    display: inline-block;
+  }
 }
 
 footer {
@@ -141,6 +172,18 @@ footer {
 
       &:hover {
         color: $color-background;
+      }
+    }
+  }
+
+  .contact {
+    span {
+      margin: 10px;
+
+      a {
+        cursor:pointer;
+        text-decoration: none;
+        color: white;
       }
     }
   }

@@ -5,6 +5,15 @@
     <span></span>
     <span></span>
   </div>
+
+  <div class="hamburger-meny" [ngClass]="{'hamburger_fade ': toggle}">
+    <ul>
+      <li> <a routerLink="/SkiCalculator" (click)="toggleOff()">Ski</a>
+      </li>
+      <li><a routerLink="/Info" (click)="toggleOff()">About me</a></li>
+    </ul>
+  </div>
+
 </header>
 
 <router-outlet></router-outlet>
@@ -19,19 +28,9 @@
     <a href="https://dribbble.com/doftgrahn" target="_blank" rel="noopener noreferrer"><i class="fab fa-dribbble"></i></a>
 
   </div>
-  <div>
+
+  <div class="contact">
     <span>Phone: +3401233439</span><br />
-    <span>Email: Simon.grahn@gmail.com</span>
+    <span><a href = "mailto: simon.grahn@gmail.com">Send me an Email</a></span>
   </div>
 </footer>
-
-
-
-
-<div class="hamburger-meny" [ngClass]="{'hamburger_fade ': toggle}">
-  <ul>
-    <li> <a routerLink="/SkiCalculator" (click)="toggleOff()">Ski</a>
-    </li>
-    <li><a routerLink="/Info" (click)="toggleOff()">About me</a></li>
-  </ul>
-</div>
