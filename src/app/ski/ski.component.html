@@ -1,20 +1,8 @@
 <section>
-  <!-- <header>
-    <h1> {{title | uppercase}} </h1>
-    <div class="hamburger" (click)="hamburger()" [ngClass]="{ 'active': toggle }">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </header> -->
 
   <div class="pic__container">
     <img [src]="picture" alt="picture" />
-
   </div>
-
-
-
 
   <div class="container__all">
 
@@ -22,20 +10,20 @@
 
     <div class="input_wrapper">
       <div class="input_container">
-        <label for="age">AGE:</label>
-        <input type="number" name="age" placeholder="age" [(ngModel)]="age" />
+        <label for="age">AGE</label>
+        <input type="number" name="age" placeholder="Yor age e.g. 27" [(ngModel)]="age" required />
       </div>
 
       <div class="input_container">
-        <label for="height">HEIGHT:</label>
-        <input type="number" name="height" placeholder="height" [(ngModel)]="height" />
+        <label for="height">HEIGHT</label>
+        <input type="number" name="height" placeholder="Your height, e.g. 143" [(ngModel)]="height" required/>
       </div>
     </div>
 
     <div class="wrapper">
       <h3>Choose your way of skiing!</h3>
-      <div *ngFor="let option of options; let i=index">
-        <input type="radio" id="{{option.id}}" name="radio" [(ngModel)]="toggleSki" [value]="option.id" />
+      <div *ngFor="let option of options; let i  = index;">
+        <input type="radio" id="{{option.id}}" name="radio" [(ngModel)]="toggleSki" [value]="option.id" [attr.checked]="i == 0 ? '': null"  />
         <label for="{{option.id}}">{{option.id}}</label>
       </div>
     </div>
@@ -62,14 +50,6 @@
       <span>Phone: +3401233439</span><br />
       <span>Email: Simon.grahn@gmail.com</span>
     </div>
-
-
-
-
-
-
-
-
-  </footer>
+</footer>
 
 </section>

@@ -58,11 +58,9 @@ export class SkiComponent implements OnInit {
     this.sum = 207;
   }
 
-  clearInputAfterSubmit(): Info {
+  clearInputAfterSubmit() {
     this.age = null;
     this.height = null;
-    this.toggleSki = null;
-    return this;
   }
 
   /* Conditionals for input */
@@ -87,16 +85,10 @@ export class SkiComponent implements OnInit {
     return this;
   }
 
+  ngOnInit() {
 
+    this.toggleSki = this.formService.types[0].id;
 
-
-
-
-
-
-
-
-
-  ngOnInit() { }
+  }
 
 }
