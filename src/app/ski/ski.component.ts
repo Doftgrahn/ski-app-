@@ -55,7 +55,7 @@ export class SkiComponent implements OnInit {
     this.sum = height + 15;
   }
   longerThanTallest() {
-    this.sum = 207;
+    this.sum = 207
   }
 
   clearInputAfterSubmit() {
@@ -77,11 +77,11 @@ export class SkiComponent implements OnInit {
     }
     else if (5 < age && age < 8 && toggleSki == null) {
       this.fiveAndEight(height)
-    } else if (age >= 207) {
+    } else if (height > 207) {
       this.longerThanTallest();
     }
 
-    this.clearInputAfterSubmit();
+    // this.clearInputAfterSubmit();
     return this;
   }
 
