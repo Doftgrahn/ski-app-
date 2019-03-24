@@ -6,6 +6,8 @@
 
   <div class="container__all">
 
+    
+
     <span>Put in your age, height and the way you like to skii!</span>
 
     <div class="input_wrapper">
@@ -22,7 +24,6 @@
         <p *ngIf="!height">Choose your height!</p>
         <p *ngIf="height">You are {{height}} cm tall!</p>
       </div>
-
     </div>
 
     <div class="wrapper">
@@ -38,7 +39,6 @@
     </div>
     <div class="resultWrapper">
       <p *ngIf="!sum"> You have not chosen yet!</p>
-
       <p *ngIf="sum"> You should be using skies with a size of {{sum}} cm. </p>
     </div>
   </div>

@@ -135,8 +135,8 @@ header {
   overflow: hidden;
   min-height: 200vh;
   width: 100%;
-  overflow: hidden;
   right: 0;
+  opacity: 1;
   @media screen and (min-width: 800px) {
     position: static;
     display: inline-block;

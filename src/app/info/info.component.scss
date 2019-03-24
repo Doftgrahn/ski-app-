@@ -1,22 +1,30 @@
 @import '../shared/variables';
 
 section {
-  margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: center;
   @media screen and (min-width: 800px) {
-   height: 80vh;
+    height: 80vh;
+  }
+
+  .content_container {
+    max-width: 100%;
+    @media screen and (min-width: 800px) {
+      max-width: 30%;
+    }
   }
 
   .wrapper {
     padding: 20px;
     margin: 20px;
     max-width: 80%;
-    background-color: $color-border;
-
+    // background-color: $color-border;
     h3 {
+      letter-spacing: 1px;
+      font-weight: 600;
       text-align: center;
       color: white;
     }
@@ -24,46 +32,27 @@ section {
     span {
       display: block;
       color: white;
-      text-align: center;
+      text-align: left;
     }
-  }
-
-  .info__wrapper {
-    text-align: center;
-    background-color: $color-border;
-    max-width: 80%;
-    padding: 20px;
-    margin: 20px;
 
     p {
+      text-align: left;
       color: white;
     }
 
-    span {
-      color: white;
-    }
-  }
+    ul {
+      text-align: left;
 
-  .link__container {
-    text-align: left;
-    padding: 20px;
-    max-width: 80%;
-    background-color: $color-border;
+      li {
+        margin: 0 auto;
+        list-style-type: none;
 
-    span {
-      color: white;
-    }
-
-    li {
-      margin-top: 10px;
-      list-style-type: none;
-
-      a {
-        color: white;
-        text-decoration: underline;
+        a {
+          cursor: pointer;
+          color: white;
+          text-decoration: underline;
+        }
       }
     }
   }
-
-
 }
