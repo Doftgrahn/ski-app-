@@ -5,9 +5,6 @@
   </div>
 
   <div class="container__all">
-
-    
-
     <span>Put in your age, height and the way you like to skii!</span>
 
     <div class="input_wrapper">
@@ -15,14 +12,14 @@
         <label for="age">AGE</label>
         <input class="rangeInput" type="range" min="0" max="99" name="age" placeholder="Yor age e.g. 27" [(ngModel)]="age" required />
         <p *ngIf="!age">Choose your age!</p>
-        <p *ngIf="age"> You are {{age}} years old!</p>
+        <p *ngIf="age"> You are {{age}} years old.</p>
       </div>
 
       <div class="input_container">
         <label for="height">HEIGHT</label>
         <input class="rangeInput" type="range" min="0" max="207" name="height" placeholder="Your height, e.g. 143" [(ngModel)]="height" required />
         <p *ngIf="!height">Choose your height!</p>
-        <p *ngIf="height">You are {{height}} cm tall!</p>
+        <p *ngIf="height">You are {{height}} cm tall.</p>
       </div>
     </div>
 
@@ -35,12 +32,11 @@
     </div>
 
     <div class="button-container">
-      <button (click)="checkResult(age, height,toggleSki)">Check out result</button>
+      <button (click)="checkResult(age, height, toggleSki)">Check out result</button>
     </div>
     <div class="resultWrapper">
       <p *ngIf="!sum"> You have not chosen yet!</p>
-      <p *ngIf="sum"> You should be using skies with a size of {{sum}} cm. </p>
+      <p *ngIf="sum"> You should be using skies with a size of {{sum}}cm<span *ngIf="second">to {{second}}cm.</span></p>
     </div>
   </div>
-
 </section>

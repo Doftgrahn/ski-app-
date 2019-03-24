@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-/**/
-import { Info } from '../shared/info';
+
+/*interface*/
 import { Type } from '../shared/type';
 
+/*Service*/
 import { FormService } from '../shared/form.service';
 
 @Component({
@@ -12,18 +13,21 @@ import { FormService } from '../shared/form.service';
 })
 export class SkiComponent implements OnInit {
 
-  constructor(private formService: FormService) {
-  }
+  constructor(private formService: FormService) { }
 
   picture: string = '../../assets/ski.jpg';
 
   /* States for input*/
+
   age: number = null;
   height: number = null;
   toggleSki: string = null;
 
   /*Result*/
+
   sum: number = null;
+
+  second: number = null;
 
   /*Get variables from Service*/
 
@@ -31,64 +35,67 @@ export class SkiComponent implements OnInit {
     return this.formService.options();
   }
 
-
   /* functions for input */
-  usesClassicSkies(height: number, age: number) {
-    if (age > 8) {
-      this.sum = height + 20;
-    }
-    else { this.sum = this.sum }
-  }
 
-  usesFreeride(height: number, age: number) {
-    if (age > 8) {
-      this.sum = height + 12.5;
-    }
-    else {
-      this.sum = this.sum
-    }
-  }
   betweenZeroAndFour(height: number) {
     this.sum = height;
   }
   fiveAndEight(height: number) {
     this.sum = height + 15;
+    this.second = height + 20;
   }
   longerThanTallest() {
-    this.sum = 207
+    this.sum = 207;
   }
 
-  clearInputAfterSubmit() {
-    this.age = null;
-    this.height = null;
+  resetSecond() {
+    this.second = null;
   }
 
-  /* Conditionals for input */
+/**/
 
-  checkResult(age: number, height: number, toggleSki: string): Info {
-    if (toggleSki == 'Classic') {
-      this.usesClassicSkies(height, age)
+  usesClassicSkies(height: number, age: number) {
+    if (age <= 4) {
+      this.betweenZeroAndFour(height);
     }
-    else if (toggleSki === 'FreeRide') {
-      this.usesFreeride(height, age)
+    else if (age > 4 && age <= 8) {
+      this.fiveAndEight(height);
     }
-    else if (0 < age && age < 4 && toggleSki == null) {
+    else {
+      this.sum = height + 20;
+    }
+    if (this.sum >= 207) {
+      this.sum = 207;
+    }
+  }
+
+  usesFreeride(height: number, age: number) {
+    if (age <= 4) {
       this.betweenZeroAndFour(height)
     }
-    else if (5 < age && age < 8 && toggleSki == null) {
-      this.fiveAndEight(height)
-    } else if (height > 207) {
-      this.longerThanTallest();
+    else if (age > 4 && age <= 8) {
+      this.sum = height + 20;
     }
+    else {
+      this.sum = height + 10;
+      this.second = height + 15;
+    }
+  }
 
-    // this.clearInputAfterSubmit();
-    return this;
+  checkResult(age: number, height: number, toggleSki: string): void {
+    this.resetSecond();
+    if (toggleSki === 'Classic') {
+      this.usesClassicSkies(height, age)
+    }
+    else {
+      this.usesFreeride(height, age)
+    }
   }
 
   ngOnInit() {
 
     this.toggleSki = this.formService.types[0].id;
-
+    
   }
 
 }

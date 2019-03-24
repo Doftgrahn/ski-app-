@@ -19,6 +19,7 @@ export class FormService {
       value: ''
     }
   ];
+  
 
   options() {
     return this.types;
