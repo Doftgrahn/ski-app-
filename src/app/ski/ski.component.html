@@ -1,10 +1,10 @@
 <section>
-
+  
   <div class="pic__container">
     <img [src]="picture" alt="picture" />
   </div>
-
   <div class="container__all">
+
     <span>Put in your age, height and the way you like to skii!</span>
 
     <div class="input_wrapper">
@@ -34,9 +34,11 @@
     <div class="button-container">
       <button (click)="checkResult(age, height, toggleSki)">Check out result</button>
     </div>
+
     <div class="resultWrapper">
       <p *ngIf="!sum"> You have not chosen yet!</p>
       <p *ngIf="sum"> You should be using skies with a size of {{sum}}cm<span *ngIf="second">to {{second}}cm.</span></p>
     </div>
   </div>
+
 </section>

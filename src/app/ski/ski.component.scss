@@ -15,11 +15,11 @@ section {
   }
 
   .container__all {
-    border-top: 20px solid $color-border;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    flex-wrap: wrap;
     padding: 0 20px;
+    border-top: 20px solid $color-border;
     background-color: $color-background;
     @media screen and (min-width: 800px) {
       align-items: center;
@@ -35,68 +35,68 @@ section {
   }
 
   .input_wrapper {
-    padding: 0 10px;
     display: flex;
     flex-direction: column;
+    padding: 0 10px;
 
     .input_container {
       margin-top: 10px;
 
       .rangeInput {
-        -webkit-appearance: none;
-        border: 3px solid $color-border;
-        cursor: pointer;
-        transition: 0.2s;
-        outline: none;
         width: 100%;
         // padding: 10px;
         margin-top: 10px;
+        cursor: pointer;
+        transition: 0.2s;
         // margin-top:-14px;
         // transform: translate3d(1em);
         // border-bottom: 4px solid $color-background;
         transition: border 0.4s ease;
+        border: 3px solid $color-border;
+        outline: none;
+        -webkit-appearance: none;
 
         &:focus {
-          color: $color-purple;
-          outline: none;
           // border-bottom: 4px solid $color-purple;
           transform: scale(1.01);
+          color: $color-purple;
+          outline: none;
         }
 
         &::-webkit-slider-runnable-track {
-          -webkit-appearance: none;
-          height: 0;
-          border: 1px solid $color-background;
           width: 100%;
+          height: 0;
           cursor: pointer;
+          border: 1px solid $color-background;
           box-shadow: none;
+          -webkit-appearance: none;
         }
 
         &::-moz-range-track {
-          -webkit-appearance: none;
           width: 100%;
           height: 1px;
-          border-radius: 0;
           cursor: pointer;
+          border-radius: 0;
+          -webkit-appearance: none;
         }
 
         &::-moz-range-thumb {
+          width: 30px;
+          height: 30px;
           cursor: pointer;
           -webkit-appearance: none;
-          height: 30px;
-          width: 30px;
         }
 
         &::-webkit-slider-thumb {
-          transition: 0.2s;
-          -webkit-appearance: none;
-          box-shadow: none;
-          box-shadow: none;
-          height: 20px;
           width: 20px;
+          height: 20px;
+          margin-top: -9px;
+          transition: 0.2s;
           border-radius: 24px;
           background-color: $color-purple;
-          margin-top: -9px;
+          box-shadow: none;
+          box-shadow: none;
+          -webkit-appearance: none;
 
           &:hover {
             border: 2px solid $color-background;
@@ -108,17 +108,17 @@ section {
         }
 
         &::placeholder {
-          color: $color-purple;
           font-size: 12px;
           font-weight: 800;
+          color: $color-purple;
         }
       }
 
       label {
-        color: $color-purple;
+        font-size: 18px;
         font-weight: 800;
         margin-top: 5px;
-        font-size: 18px;
+        color: $color-purple;
       }
     }
 
@@ -135,8 +135,8 @@ section {
     }
 
     input {
-      margin: 10px;
       position: absolute;
+      margin: 10px;
       opacity: 0;
 
       &:active,
@@ -150,8 +150,8 @@ section {
 
       &:checked + label {
         &:after {
-          content: '';
           left: 20px;
+          content: '';
           transition: 0.5s;
           background-color: $color-light;
         }
@@ -163,53 +163,53 @@ section {
       color: $color-purple;
 
       &:before {
-        border-radius: 20px;
-        transition: 0.5s;
-        margin-right: 30px;
         font-size: 18px;
-        content: '';
         display: inline-block;
         width: 50px;
         height: 30px;
+        margin-right: 30px;
+        content: '';
+        transition: 0.5s;
+        border-radius: 20px;
         background-color: $color-button;
       }
 
       &:after {
-        border-radius: 20px;
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        content: '';
         transition: 0.5s;
         border-radius: 20px;
-        content: '';
-        display: inline-block;
+        border-radius: 20px;
         background-color: $color-border;
-        height: 30px;
-        width: 30px;
-        left: 0;
-        position: absolute;
       }
     }
   }
 
   .button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     // border-top: 20px solid $color-border;
     // background-color:$color-mellowblue;
     padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     button {
+      font-size: 18px;
       position: relative;
-      transition: 0.2s;
-      border: none;
-      color: white;
       margin: 10px;
       // width: 50%;
       padding: 20px;
-      background-color: $color-purple;
+      cursor: pointer;
+      transition: 0.2s;
+      color: white;
+      border: none;
       border-radius: 5px;
       outline: none;
-      font-size: 18px;
-      cursor: pointer;
+      background-color: $color-purple;
 
       &:hover {
         background-color: $color-border;
@@ -221,16 +221,17 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $color-border;
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 5px;
     color: white;
+    background-color: $color-border;
     @media screen and (min-width: 800px) {
       padding: 20px;
     }
+
     span {
-      color:white;
+      color: white;
     }
   }
 }
