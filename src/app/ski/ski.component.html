@@ -10,25 +10,29 @@
     <div class="input_wrapper">
       <div class="input_container">
         <label for="age">AGE</label>
-        <input class="rangeInput" type="range" min="0" max="99" name="age" placeholder="Yor age e.g. 27" [(ngModel)]="age" required />
         <p *ngIf="!age">Choose your age!</p>
         <p *ngIf="age"> You are {{age}} years old.</p>
+        <input class="rangeInput" type="range" min="0" max="99" name="age" placeholder="Yor age e.g. 27" [(ngModel)]="age" required />
       </div>
 
       <div class="input_container">
         <label for="height">HEIGHT</label>
-        <input class="rangeInput" type="range" min="0" max="207" name="height" placeholder="Your height, e.g. 143" [(ngModel)]="height" required />
         <p *ngIf="!height">Choose your height!</p>
         <p *ngIf="height">You are {{height}} cm tall.</p>
+        <input class="rangeInput" type="range" min="0" max="207" name="height" placeholder="Your height, e.g. 143" [(ngModel)]="height" required />
       </div>
     </div>
 
     <div class="wrapper">
       <h3>Choose your way of skiing!</h3>
+      <p>Your way of skiing: {{toggleSki}}</p>
       <div *ngFor="let option of options; let i  = index;">
         <input type="radio" id="{{option.id}}" name="radio" [(ngModel)]="toggleSki" [value]="option.id" [attr.checked]="i == 0 ? '': null" />
         <label for="{{option.id}}">{{option.id}}</label>
       </div>
+
+
+
     </div>
 
     <div class="button-container">

@@ -44,19 +44,20 @@ section {
 
       .rangeInput {
         width: 100%;
-        // padding: 10px;
-        margin-top: 10px;
+         padding: 10px;
+        margin-top: 20px;
         cursor: pointer;
         transition: 0.2s;
-        // margin-top:-14px;
-        // transform: translate3d(1em);
-        // border-bottom: 4px solid $color-background;
+        transform: translate3d(1em);
         transition: border 0.4s ease;
         border: 3px solid $color-border;
+        background-color: $color-border;
         outline: none;
         -webkit-appearance: none;
+        border-radius: 18px;
 
         &:focus {
+          transform: translate3d(1em);
           // border-bottom: 4px solid $color-purple;
           transform: scale(1.01);
           color: $color-purple;
@@ -65,9 +66,10 @@ section {
 
         &::-webkit-slider-runnable-track {
           width: 100%;
-          height: 0;
+          height: 10px;
           cursor: pointer;
-          border: 1px solid $color-background;
+           border: 5px solid $color-background;
+           border-radius: 18px;
           box-shadow: none;
           -webkit-appearance: none;
         }
@@ -88,9 +90,9 @@ section {
         }
 
         &::-webkit-slider-thumb {
-          width: 20px;
-          height: 20px;
-          margin-top: -9px;
+          width: 40px;
+          height: 40px;
+          margin-top: -19px;
           transition: 0.2s;
           border-radius: 24px;
           background-color: $color-purple;
@@ -139,6 +141,10 @@ section {
       color: $color-purple;
     }
 
+    p {
+      color: $color-purple;
+    }
+
     input {
       position: absolute;
       opacity: 0;
@@ -178,9 +184,11 @@ section {
         transition: 0.5s;
         border-radius: 20px;
         background-color: $color-button;
+        margin-top: 20px;
       }
 
       &:after {
+        margin-top: 20px;
         border: 1px solid $color-background;
         position: absolute;
         left: 0;
