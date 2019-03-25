@@ -12,7 +12,7 @@ export class AppComponent {
   hamburger() {
     this.toggle = !this.toggle
   }
-  
+
   toggleOff() {
     this.toggle = false;
   }
