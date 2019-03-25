@@ -7,10 +7,11 @@ import { InfoComponent } from '../info/info.component';
 import { HomeComponent } from '../home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/Home', pathMatch: 'full' },
   { path: 'Home', component: HomeComponent },
   { path: 'SkiCalculator', component: SkiComponent },
-  { path: 'Info', component: InfoComponent }
+  { path: 'Info', component: InfoComponent },
+  { path: '**', redirectTo: 'Home', pathMatch: 'full' },
+
 ]
 
 @NgModule({
