@@ -84,7 +84,14 @@ export class SkiComponent implements OnInit {
 
   checkResult(age: number, height: number, toggleSki: string): void {
     this.resetSecond();
-    window.scrollBy(0, 300);
+
+    window.scrollBy({
+      top: 300,
+      left: 0,
+      behavior: 'smooth'
+    });
+
+
     if (toggleSki === 'Classic') {
       this.usesClassicSkies(height, age)
     }
