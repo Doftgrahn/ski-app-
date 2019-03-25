@@ -22,6 +22,9 @@ header {
   }
 
   .hamburger {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    position: relative;
     overflow: hidden;
     right: 0;
     z-index: 1000000;
@@ -182,7 +185,7 @@ footer {
       margin: 10px;
 
       a {
-        cursor:pointer;
+        cursor: pointer;
         text-decoration: none;
         color: white;
       }
