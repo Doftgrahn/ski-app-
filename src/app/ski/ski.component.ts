@@ -15,7 +15,7 @@ export class SkiComponent implements OnInit {
 
   constructor(private formService: FormService) { }
 
-  picture: string = '../../assets/ski.jpg';
+  picture: string = '/assets/ski.jpg';
 
   /* States for input*/
 
@@ -52,7 +52,7 @@ export class SkiComponent implements OnInit {
     this.second = null;
   }
 
-/**/
+  /**/
 
   usesClassicSkies(height: number, age: number) {
     if (age <= 4) {
@@ -95,7 +95,7 @@ export class SkiComponent implements OnInit {
   ngOnInit() {
 
     this.toggleSki = this.formService.types[0].id;
-    
+
   }
 
 }
