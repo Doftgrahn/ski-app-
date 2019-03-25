@@ -12,14 +12,14 @@
         <label for="age">AGE</label>
         <p *ngIf="!age">Choose your age!</p>
         <p *ngIf="age"> You are {{age}} years old.</p>
-        <input class="rangeInput" type="range" min="0" max="99" name="age" placeholder="Yor age e.g. 27" [(ngModel)]="age" required />
+        <input class="rangeInput" type="number" min="0" max="99" name="age" placeholder="Yor age e.g. 27" [(ngModel)]="age" required />
       </div>
 
       <div class="input_container">
         <label for="height">HEIGHT</label>
         <p *ngIf="!height">Choose your height!</p>
         <p *ngIf="height">You are {{height}} cm tall.</p>
-        <input class="rangeInput" type="range" min="0" max="207" name="height" placeholder="Your height, e.g. 143" [(ngModel)]="height" required />
+        <input class="rangeInput" type="number" min="0" max="207" name="height" placeholder="Your height, e.g. 143" [(ngModel)]="height" required />
       </div>
     </div>
 
