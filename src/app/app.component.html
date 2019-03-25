@@ -8,12 +8,10 @@
 
   <div class="hamburger-meny" [ngClass]="{'hamburger_fade ': toggle}">
     <ul>
-
+      <li><a routerLink="/Home" (click)="toggleOff()">Home</a></li>
       <li> <a routerLink="/SkiCalculator" (click)="toggleOff()">Ski</a></li>
-
       <li><a routerLink="/Info" (click)="toggleOff()">About me</a></li>
     </ul>
-
   </div>
 
 </header>
@@ -28,9 +26,7 @@
     <a href="https://github.com/Doftgrahn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
     <a href="https://linkedin.com/in/simon-grahn-06994797" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
     <a href="https://dribbble.com/doftgrahn" target="_blank" rel="noopener noreferrer"><i class="fab fa-dribbble"></i></a>
-
   </div>
-
   <div class="contact">
     <span>Phone: +3401233439</span><br />
     <span><a href="mailto: simon.grahn@gmail.com">Send me an Email</a></span>

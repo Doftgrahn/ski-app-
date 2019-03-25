@@ -8,12 +8,14 @@ import { FormService } from './shared/form.service';
 import { InfoComponent } from './info/info.component';
 
 import { AppRoutingModule } from './shared/app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkiComponent,
-    InfoComponent
+    InfoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
