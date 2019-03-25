@@ -15,7 +15,7 @@ export class SkiComponent implements OnInit {
 
   constructor(private formService: FormService) { }
 
-  picture: string = '/assets/ski.jpg';
+  picture: string = './assets/ski.jpg';
 
   /* States for input*/
 
